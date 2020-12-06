@@ -1,1 +1,20 @@
-# Implement your object-oriented solution here!
+class EvenFibonacci
+    attr_accessor :sum
+    def initialize(limit)
+        @sum=even_fibonacci_sum(limit)
+    end
+    def even_fibonacci_sum(limit)
+        sum=0
+        first=0
+        second=1
+        while(first<=limit)
+            third = first+second
+            if first%2==0
+                sum+=first
+            end
+            first=second
+            second=third
+        end
+        sum
+    end
+end
